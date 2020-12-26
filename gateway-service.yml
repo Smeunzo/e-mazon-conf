@@ -11,5 +11,9 @@ spring:
           uri: lb://INVENTORY-SERVICE
           predicates:
             - Path= /inventories/**
+        - id: r3
+          uri: lb://USER-SERVICE
+          predicates:
+            - Path= /user/**
 server:
   port: 8888
