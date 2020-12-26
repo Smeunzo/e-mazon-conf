@@ -14,6 +14,6 @@ spring:
         - id: r3
           uri: lb://USER-SERVICE
           predicates:
-            - Path= /user/**
+            - Path= /users/**
 server:
   port: 8888
