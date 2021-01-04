@@ -1,23 +1,2 @@
-spring:
-  cloud:
-    gateway:
-      routes:
-        - id: r1
-          uri: lb://CUSTOMER-SERVICE
-          predicates:
-            - Path= /customers/**
-
-        - id: r2
-          uri: lb://INVENTORY-SERVICE
-          predicates:
-            - Path= /inventory/**
-        - id: r3
-          uri: lb://USER-SERVICE
-          predicates:
-            - Path= /users/**
-        - id: r4
-          uri: lb://USER-SERVICE
-          predicates:
-            - Path= /login/**
 server:
   port: 8888
