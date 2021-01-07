@@ -1,2 +1,28 @@
 server:
   port: 8888
+
+spring:
+  cloud:
+    gateway:
+      globalcors:
+        corsConfigurations:
+          '[/customers/**]':
+            allowedOrigins: "http://localhost:3000"
+            allowedHeaders:
+              - content-type
+            allowedMethods:
+              - GET
+              - POST
+          '[/users/**]':
+            allowedOrigins: "http://localhost:3000"
+            allowedHeaders:
+              - content-type
+            allowedMethods:
+              - GET
+              - POST
+          '[/login]':
+            allowedOrigins: "http://localhost:3000"
+            allowedHeaders:
+              - Content-Type
+            allowedMethods:
+              - POST
