@@ -26,3 +26,10 @@ spring:
               - Content-Type
             allowedMethods:
               - POST
+          '[/inventory/**]':
+            allowedOrigins: "http://localhost:3000"
+            allowedHeaders:
+              - Content-Type
+            allowedMethods:
+              - GET
+              - POST
